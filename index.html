@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Auniro | Building Duesly</title>
+    <meta
+      name="description"
+      content="Auniro builds calm, reliable software for member groups. Join the Duesly waitlist for group dues, chama contributions, and channel access automation."
+    >
+    <meta name="waitlist-endpoint" content="https://formspree.io/f/xbdejwzg">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Site header">
+      <a class="brand" href="#top" aria-label="Auniro home">
+        <svg class="brand-mark" viewBox="0 0 48 48" role="img" aria-label="Auniro logo">
+          <path class="mark-outer" d="M24 5 42 15.4v17.2L24 43 6 32.6V15.4L24 5Z"></path>
+          <path class="mark-thread" d="M15.2 29.9 24 14.2l8.8 15.7"></path>
+          <circle class="mark-dot" cx="24" cy="32" r="3.2"></circle>
+        </svg>
+        <span>Auniro</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#duesly">Duesly</a>
+        <a href="#waitlist">Waitlist</a>
+        <a href="#company">Company</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <canvas id="hero-scene" aria-hidden="true"></canvas>
+        <div class="hero-content">
+          <p class="eyebrow">Auniro is building the first product: Duesly</p>
+          <h1 id="hero-title">Member payments, records, and access for modern groups.</h1>
+          <p class="hero-copy">
+            Duesly helps chamas, clubs, creators, and paid communities collect recurring dues,
+            track who has paid, and manage access across WhatsApp, Telegram, and more.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#waitlist">Join the waitlist</a>
+            <a class="button secondary" href="#duesly">See the product</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-band" id="duesly" aria-labelledby="duesly-title">
+        <div class="section-grid">
+          <div>
+            <p class="eyebrow">Duesly</p>
+            <h2 id="duesly-title">A shared payment brain for groups that live in chats.</h2>
+          </div>
+          <p class="section-copy">
+            Most groups already coordinate inside WhatsApp and Telegram. Duesly adds the missing
+            layer: plans, contributions, receipts, reminders, roles, reports, and access rules.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-kicker">01</span>
+            <h3>Collect dues</h3>
+            <p>Set monthly, weekly, one-time, or campaign-based collections for members.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-kicker">02</span>
+            <h3>Track members</h3>
+            <p>See active, overdue, paused, and invited members without chasing spreadsheets.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-kicker">03</span>
+            <h3>Automate access</h3>
+            <p>Grant or remove access in Telegram and WhatsApp-linked workflows as payments change.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-kicker">04</span>
+            <h3>Report clearly</h3>
+            <p>Give treasurers and admins clean histories, exports, balances, and audit trails.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="split-band" aria-labelledby="powered-title">
+        <div class="panel">
+          <p class="eyebrow">Powered by</p>
+          <h2 id="powered-title">An entitlement engine, not just a bot.</h2>
+          <p>
+            Duesly is designed around members, dues, payment status, and permissions. Telegram is
+            the first delivery channel, with WhatsApp, Discord, email, and web access ready to sit
+            on the same foundation.
+          </p>
+        </div>
+        <div class="flow-list" aria-label="Duesly flow">
+          <div><span>Payment</span><strong>M-Pesa, card, bank, crypto later</strong></div>
+          <div><span>Status</span><strong>Active, overdue, trial, cancelled</strong></div>
+          <div><span>Access</span><strong>Telegram, WhatsApp, web, email</strong></div>
+          <div><span>Records</span><strong>Receipts, reports, member ledger</strong></div>
+        </div>
+      </section>
+
+      <section class="waitlist-band" id="waitlist" aria-labelledby="waitlist-title">
+        <div class="waitlist-copy">
+          <p class="eyebrow">Early access</p>
+          <h2 id="waitlist-title">Join the Duesly waitlist.</h2>
+          <p>
+            We are shaping Duesly for chamas, creators, clubs, and paid communities. Tell us where
+            your group lives and what you need to collect.
+          </p>
+        </div>
+
+        <form class="waitlist-form" id="waitlist-form">
+          <label>
+            Name
+            <input name="name" autocomplete="name" placeholder="Your name" required>
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          </label>
+          <label>
+            Group type
+            <select name="groupType" required>
+              <option value="">Select one</option>
+              <option>Chama or savings group</option>
+              <option>Paid Telegram community</option>
+              <option>WhatsApp group</option>
+              <option>Club or association</option>
+              <option>Creator membership</option>
+            </select>
+          </label>
+          <label>
+            Main channel
+            <select name="channel" required>
+              <option value="">Select one</option>
+              <option>WhatsApp</option>
+              <option>Telegram</option>
+              <option>Both WhatsApp and Telegram</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <button class="button primary form-button" type="submit">Request early access</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="company-band" id="company" aria-labelledby="company-title">
+        <p class="eyebrow">Auniro</p>
+        <h2 id="company-title">Software built from legacy into useful systems.</h2>
+        <p>
+          Auniro is a small software company focused on practical tools for groups, payments, and
+          community operations. Duesly is our first step.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Auniro</span>
+      <span>Building Duesly</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
